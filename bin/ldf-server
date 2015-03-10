@@ -116,6 +116,9 @@ else {
           if (blankNodePath)
             dereference[blankNodePath + datasourcePath + '/'] = datasourcePath;
         }
+        // Add memento
+        settings.memento = datasourceConfig.memento || false;
+
         // Create the data source
         datasource = new Datasource(settings);
         datasourceConfig.datasource = datasource;
